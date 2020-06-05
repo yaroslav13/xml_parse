@@ -8,7 +8,7 @@ class Product {
 }
 
 function loadXMLDoc() {
-  fetch('shop_page.xml').then(function(responce){
+  fetch('https://yaroslav13.github.io/xml_parse/shop_page.xml').then(function(responce){
     return responce.text();
   }).then(function(data){
      myFunction(data);
@@ -26,7 +26,7 @@ function myFunction(xml) {
   	var product = Product(
         x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue,
         x[i].getElementsByTagName("description")[0].childNodes[0].nodeValue,
-        x[i].getElementsByTagName("text")[0].childNodes[0].nodeValue 
+        x[i].getElementsByTagName("price")[0].childNodes[0].nodeValue 
   	);
     table += "<tr><td>" +
     product.title +
