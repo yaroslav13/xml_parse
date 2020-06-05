@@ -19,7 +19,7 @@ function loadXMLDoc() {
 
 function myFunction(xml) {
   var i;
-  var xmlDoc = xml.responce;
+  var xmlDoc = xml.responceXML;
   var table="<tr><th>Title</th></tr>";
   var x = xmlDoc.getElementsByTagName("products");
   for (i = 0; i <x.length; i++) { 
