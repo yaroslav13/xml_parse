@@ -19,7 +19,8 @@ function loadXMLDoc() {
 
 function myFunction(xml) {
   var i;
-  var xmlDoc = xml.responceXML;
+  var parser = new DOMParser();
+  var xmlDoc = parser.parseFromString(xml,"text/xml")
   var table="<tr><th>Title</th></tr>";
   var x = xmlDoc.getElementsByTagName("products");
   for (i = 0; i <x.length; i++) { 
